@@ -1,9 +1,11 @@
-gogs:
-  restart: unless-stopped
-  image: gogs/gogs
-  volumes:
-    - /var/gogs:/data
-  ports:
-    - "10023:22"
-    - "3001:3000"
+version: '3.1'
+services:
+  gogs:
+    restart: unless-stopped
+    image: gogs/gogs
+    volumes:
+      - /var/gogs3:/data
+    ports:
+      - "11111:22"
+      - "3001:3000"
 
